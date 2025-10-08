@@ -1,4 +1,3 @@
-# Site-SecureVault
 <h1 align="center">🔐 SecureVault</h1>
 <p align="center">
   <em>Seu Cofrinho Digital de Senhas — Geração e Armazenamento Local de Senhas Seguras</em>
@@ -13,49 +12,61 @@
 
 ---
 
-## 🧭 Sobre o Projeto
 
-O **SecureVault** é um **gerenciador de senhas local**, desenvolvido com **HTML, CSS e JavaScript puro**, que permite gerar e armazenar senhas de forma simples, intuitiva e segura — **diretamente no seu navegador**.
+💾 Projeto: Gerenciador Local de Senhas
 
-Ele é ideal para quem quer manter suas senhas seguras sem depender de serviços online.  
-As informações **não são enviadas a servidores externos**: tudo é mantido **localmente** no seu navegador.
+SecureVault é um cofrinho digital pensado para quem quer gerar, armazenar e gerenciar senhas de forma simples, segura e 100% local — sem envio de dados para servidores externos. Ideal para portfólio, estudo e uso pessoal.
 
----
+🛠️ Tecnologias Utilizadas
 
-## ⚙️ Funcionalidades Principais
+HTML5 — Estrutura da página
 
-✅ **Geração de Senhas Fortes**
-- Personalize o comprimento da senha.
-- Escolha quais tipos de caracteres usar:
-  - Letras maiúsculas (A–Z)
-  - Letras minúsculas (a–z)
-  - Números (0–9)
-  - Símbolos (!@#$%)
+CSS3 — Layout responsivo e visual moderno
 
-✅ **Gerenciamento Local**
-- Armazene senhas temporariamente no navegador (LocalStorage ou memória temporária).
-- Visualize, copie ou remova senhas salvas com apenas um clique.
+JavaScript (ES6+) — Geração de senhas, interações e persistência local
 
-✅ **Interface Responsiva e Intuitiva**
-- Design limpo e moderno.
-- Efeitos suaves, botões interativos e layout dividido em seções claras.
+LocalStorage / SessionStorage — Armazenamento temporário das senhas no navegador
 
-✅ **Privacidade Garantida**
-- Nenhum dado é enviado para a internet.
-- As senhas desaparecem ao fechar a aba ou limpar o cache.
+🎯 Objetivos do Projeto
 
----
+Gerar senhas fortes personalizáveis.
 
-## 🧱 Estrutura de Pastas
+Armazenar senhas localmente no navegador (privacidade).
 
-```bash
-securevault/
-│
-├── index.html       # Estrutura principal da interface
-├── style.css        # Estilo visual e responsividade
-├── script.js        # Lógica de geração e gerenciamento das senhas
-├── assets/          # Imagens, ícones e logo do projeto
-│   ├── logo.png
-│   ├── favicon.ico
-│   └── screenshot.png
-└── README.md        # Documentação do projeto
+Oferecer interface clara, responsiva e acessível.
+
+Servir como projeto didático para front-end com HTML/CSS/JS.
+
+🧭 Funcionalidades Principais
+
+✅ Gerar senha com:
+
+comprimento configurável;
+
+escolha entre letras maiúsculas/minúsculas, números e símbolos.
+
+✅ Salvar entradas (nome do serviço + senha).
+
+✅ Listar senhas salvas localmente.
+
+✅ Copiar, ocultar/mostrar e remover senhas com um clique.
+
+✅ Interface responsiva com feedback visual (tooltips/avisos).
+
+✅ Privacidade: nada é enviado para servidores.
+
+📷 Interface
+
+A interface principal é dividida em duas colunas:
+
+Painel esquerdo — Gerar & Salvar Senha (nome do serviço, opções e botão gerar).
+
+Painel direito — Senhas Salvas (lista com ações: ocultar, copiar, remover).
+
+Use imagens reais do seu projeto colocando-as em assets/ e atualizando os links deste README (assets/screenshot.png, assets/demo.gif).
+
+
+🌐 Acesse o Projeto Online
+
+👉 Versão demo (online):
+https://securevault-demo.onrender.com
