@@ -7,8 +7,8 @@
 
 ## 📸 Demonstração
 
-<img width="1900" height="921" alt="image" src="https://github.com/user-attachments/assets/640deabe-40dc-49fe-96df-8e452f552d93" />
-<img width="1900" height="917" alt="image" src="https://github.com/user-attachments/assets/ed90530b-a8ad-4c4b-971f-0e0716aaabc0" />
+<img width="1897" height="912" alt="image" src="https://github.com/user-attachments/assets/fae973fd-43d2-450f-b13d-8a12c17aeef6" />
+<img width="1897" height="916" alt="image" src="https://github.com/user-attachments/assets/0d0244a8-3e56-49a2-ba04-cfd06bfb3a9f" />
 
 ---
 
