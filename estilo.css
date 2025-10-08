@@ -1,0 +1,452 @@
+/* Definição das variáveis de cor - Paleta: Misty Blue, Light Grey, Pale Blush, Oak Wood, Nordic Blue */
+:root {
+    --misty-blue: #C6D1D9;          /* Fundo do Body / Base Clara */
+    --light-grey: #F1F1F1;          /* Fundo dos Cards / Base dos Elementos */
+    --pale-blush: #F4EBE9;          /* Destaque / Botão Secundário */
+    --oak-wood: #E7E0D8;            /* Fundo de Inputs / Elementos mais claros */
+    --nordic-blue: #67869A;         /* Cor Principal de Ação / Texto Principal */
+    --dark-text: #3C505E;           /* Cor mais escura para títulos (Azul Escuro Profundo) */
+
+    --shadow-light: rgba(103, 134, 154, 0.1); 
+    --shadow-strong: rgba(103, 134, 154, 0.25); 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: var(--nordic-blue); 
+    line-height: 1.6;
+    padding: 40px 20px;
+    min-height: 100vh;
+    position: relative; 
+    overflow-x: hidden; 
+
+    /* Fundo: Degradê Mais Escuro e Visível */
+    background: linear-gradient(-45deg, var(--misty-blue), var(--nordic-blue), var(--pale-blush), var(--nordic-blue));
+    background-size: 600% 600%; 
+    animation: gradient-flow 10s ease infinite; 
+}
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* --- Fim do Fundo Animado --- */
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative; 
+    z-index: 1;
+}
+
+/* NOVO: Wrapper para o logo e título */
+.header-title-wrapper {
+    display: flex; /* Para alinhar logo e h1 lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente o grupo */
+    margin-bottom: 10px; /* Reduz o espaçamento geral para o p */
+}
+
+/* Estilos para o logotipo (tamanho menor e margem) */
+.site-logo {
+    max-width: 60px; /* Reduz o tamanho da imagem */
+    height: auto;
+    margin-right: 15px; /* Espaçamento entre o logo e o h1 */
+    /* Removemos o margin-bottom aqui, pois o wrapper já controla o espaçamento */
+}
+
+header h1 {
+    /* Título principal em Dark Text */
+    color: var(--dark-text); 
+    font-size: 4.5em; 
+    font-weight: 800;
+    letter-spacing: 3px; 
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.05); 
+    margin: 0; /* Remove a margem padrão do h1 para não atrapalhar o alinhamento flex */
+}
+
+header p {
+    font-weight: 600; 
+    color: var(--nordic-blue); 
+    font-size: 1.3em; 
+    margin-top: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative; 
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: var(--light-grey); 
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow-light); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--pale-blush); 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-strong);
+}
+
+h2 {
+    /* Títulos H2 em Dark Text */
+    color: var(--dark-text); 
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 2em; 
+    border-bottom: 2px solid var(--pale-blush); 
+    padding-bottom: 10px;
+}
+
+h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    /* Subtítulos H3 em Dark Text */
+    color: var(--dark-text); 
+    font-size: 1.2em;
+}
+
+/* --- Estilos de Formulário --- */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--nordic-blue);
+}
+
+input[type="number"],
+input[type="text"] {
+    padding: 14px 18px;
+    border: 1px solid var(--pale-blush); 
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--oak-wood); 
+    color: var(--nordic-blue); 
+}
+
+input[type="number"]:focus,
+input[type="text"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill:hover,
+input[type="text"]:-webkit-autofill:focus,
+input[type="text"]:-webkit-autofill:active {
+    border-color: var(--nordic-blue); 
+    box-shadow: 0 0 0 3px rgba(103, 134, 154, 0.3);
+    outline: none;
+    -webkit-box-shadow: 0 0 0 30px var(--oak-wood) inset; 
+    -webkit-text-fill-color: var(--nordic-blue);
+}
+input[type="text"]:focus {
+    border-color: var(--nordic-blue); 
+    box-shadow: 0 0 0 3px rgba(103, 134, 154, 0.3);
+    outline: none;
+}
+
+/* --- Opções de Caracteres Alinhadas (Grid) --- */
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin: 0;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--pale-blush); 
+    background-color: var(--oak-wood); 
+    color: var(--nordic-blue); 
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.options label:hover {
+    background-color: var(--misty-blue); 
+    border-color: var(--nordic-blue);
+}
+
+input[type="checkbox"] {
+    min-width: 20px; 
+    min-height: 20px;
+    margin-right: 12px;
+    accent-color: var(--nordic-blue); 
+}
+
+/* --- Estilos de Botões --- */
+
+.btn {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+/* Botão Primário (Gerar Senha, Mostrar) - Nordic Blue */
+.btn.primary {
+    background-color: var(--nordic-blue);
+    color: var(--light-grey); 
+}
+
+.btn.primary:hover:not(:disabled) {
+    background-color: #5a7486; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(103, 134, 154, 0.4);
+}
+
+/* Botão Secundário (Adicionar Entrada, Copiar) - Pale Blush */
+.btn.secondary {
+    background-color: var(--pale-blush);
+    color: var(--nordic-blue); 
+}
+
+.btn.secondary:hover:not(:disabled) {
+    background-color: #e8e0dc; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(244, 235, 233, 0.5);
+}
+
+.btn:disabled {
+    background-color: #d0d0d0;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+.btn.full-width {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Botão de Risco (Remover) - Misty Blue com texto Nordic Blue */
+.btn.danger {
+    background-color: var(--misty-blue);
+    color: var(--nordic-blue);
+    border: 1px solid var(--nordic-blue);
+}
+
+.btn.danger:hover {
+    background-color: #b0c2cc;
+}
+
+/* --- Seção de Geração de Senha --- */
+
+.password-output {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+#generated-password {
+    flex-grow: 1;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--nordic-blue); 
+    text-align: center;
+    border: 2px dashed var(--pale-blush); 
+    background-color: var(--oak-wood); 
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* --- Layout da Lista de Senhas --- */
+
+.info-text {
+    color: var(--nordic-blue);
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    padding: 10px;
+    border-left: 4px solid var(--pale-blush); 
+    background-color: var(--oak-wood); 
+    border-radius: 8px;
+}
+
+.password-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 10px;
+    border-bottom: 1px solid var(--pale-blush); 
+    transition: background-color 0.3s;
+}
+
+.password-item:hover {
+    background-color: var(--oak-wood); 
+}
+
+.service-name-display {
+    font-weight: 700;
+    flex: 1;
+    color: var(--dark-text); 
+    font-size: 1.1em;
+}
+
+.password-display {
+    flex: 2;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 8px 15px;
+    background-color: var(--misty-blue); 
+    border-radius: 6px;
+    margin: 0 15px;
+    min-width: 150px;
+}
+
+.password-mask {
+    color: var(--nordic-blue); 
+    letter-spacing: 3px;
+}
+
+.real-password {
+    color: var(--dark-text); 
+    font-weight: 700;
+}
+
+.actions {
+    margin-left: 15px;
+    min-width: 210px;
+    display: flex;
+    gap: 8px;
+}
+
+.btn.small {
+    padding: 8px 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    flex-grow: 1;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-grey); /* Fundo claro para contrastar com o degrade do body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out, visibility 0.5s; /* Transição suave */
+    color: var(--dark-text);
+}
+
+.loader {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--pale-blush); /* Destaque no carregador */
+    box-shadow: 0 10px 30px var(--shadow-strong);
+}
+
+.loader h1 {
+    font-size: 2.5em; /* Reduzido para caber melhor no loader */
+    color: var(--nordic-blue);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.loader p {
+    font-weight: 400;
+    color: var(--dark-text);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid var(--misty-blue); /* Cor interna do aro */
+    border-top: 6px solid var(--nordic-blue); /* Nordic Blue para a parte que gira */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Classe para ocultar (adicionada pelo JS) */
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Garante que o usuário não interaja com o que está por baixo */
+}
+
+/* Responsividade básica para celular */
+@media (max-width: 600px) {
+    .options {
+        grid-template-columns: 1fr;
+    }
+    .password-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .password-display {
+        width: 100%;
+        margin: 0;
+    }
+    .actions {
+        width: 100%;
+        margin-left: 0;
+        justify-content: space-between;
+    }
+
+    .header-title-wrapper { /* Ajusta o wrapper para telas menores */
+        flex-direction: column;
+    }
+    .site-logo {
+        margin-right: 0;
+        margin-bottom: 10px; /* Adiciona margem abaixo do logo em telas menores */
+    }
+    header h1 {
+        font-size: 3em; /* Reduz o tamanho da fonte do h1 em telas menores */
+    }
+}
