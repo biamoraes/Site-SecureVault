@@ -13,11 +13,11 @@
 ---
 
 
-💾 Projeto: Gerenciador Local de Senhas
+# 💾 Projeto: Gerenciador Local de Senhas
 
 SecureVault é um cofrinho digital pensado para quem quer gerar, armazenar e gerenciar senhas de forma simples, segura e 100% local — sem envio de dados para servidores externos. Ideal para portfólio, estudo e uso pessoal.
 
-🛠️ Tecnologias Utilizadas
+# 🛠️ Tecnologias Utilizadas
 
 HTML5 — Estrutura da página
 
@@ -27,7 +27,7 @@ JavaScript (ES6+) — Geração de senhas, interações e persistência local
 
 LocalStorage / SessionStorage — Armazenamento temporário das senhas no navegador
 
-🎯 Objetivos do Projeto
+# 🎯 Objetivos do Projeto
 
 Gerar senhas fortes personalizáveis.
 
@@ -37,7 +37,7 @@ Oferecer interface clara, responsiva e acessível.
 
 Servir como projeto didático para front-end com HTML/CSS/JS.
 
-🧭 Funcionalidades Principais
+# 🧭 Funcionalidades Principais
 
 ✅ Gerar senha com:
 
@@ -55,7 +55,7 @@ escolha entre letras maiúsculas/minúsculas, números e símbolos.
 
 ✅ Privacidade: nada é enviado para servidores.
 
-📷 Interface
+# 📷 Interface
 
 A interface principal é dividida em duas colunas:
 
@@ -66,6 +66,6 @@ Painel direito — Senhas Salvas (lista com ações: ocultar, copiar, remover).
 Use imagens reais do seu projeto colocando-as em assets/ e atualizando os links deste README (assets/screenshot.png, assets/demo.gif).
 
 
-🌐 Acesse o Projeto Online
+# 🌐 Acesse o Projeto Online
 
 👉 Versão demo (online): https://siteweb-securevault.onrender.com
